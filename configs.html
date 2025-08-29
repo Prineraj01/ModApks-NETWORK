@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Internet Configs - ModApk748 Mods</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="navbar">
+    <div class="brand">ModApk748 Mods</div>
+    <nav class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="mods.html">Mods</a>
+      <a href="books.html">Books</a>
+      <a href="admin.html" class="admin-link">Admin</a>
+    </nav>
+  </header>
+
+  <main class="container">
+    <h2>Internet Configs</h2>
+    <div class="search-wrap">
+      <input id="configsSearch" placeholder="Search configs..." />
+    </div>
+    <div id="configsGrid" class="grid"></div>
+  </main>
+
+  <footer class="footer">© ModApk748 Mods</footer>
+  <script src="app.js"></script>
+  <script>
+    document.getElementById('configsSearch').addEventListener('input', e => {
+      window.renderConfigs(e.target.value.toLowerCase());
+    });
+    window.addEventListener('DOMContentLoaded', ()=> window.renderConfigs(''));
+  </script>
+</body>
+</html>

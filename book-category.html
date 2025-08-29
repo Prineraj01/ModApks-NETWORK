@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Books Category - ModApk748 Mods</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="navbar">
+    <div class="brand">ModApk748 Mods</div>
+    <nav class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="mods.html">Mods</a>
+      <a href="configs.html">Internet Config</a>
+      <a href="admin.html" class="admin-link">Admin</a>
+    </nav>
+  </header>
+
+  <main class="container">
+    <h2 id="catTitle">Books</h2>
+    <div class="search-wrap">
+      <input id="booksSearch" placeholder="Search books..." />
+    </div>
+    <div id="booksGrid" class="grid"></div>
+  </main>
+
+  <footer class="footer">© ModApk748 Mods</footer>
+  <script src="app.js"></script>
+  <script>
+    function getQueryParam(name){ return new URLSearchParams(location.search).get(name); }
+    const cat = getQueryParam('cat') || '10th';
+    document.getElementById('catTitle').innerText = cat.replace('-', ' ').toUpperCase();
+    document.getElementById('booksSearch').addEventListener('input', e => {
+      window.renderBooks(cat, e.target.value.toLowerCase());
+    });
+    window.addEventListener('DOMContentLoaded', ()=> window.renderBooks(cat,''));
+  </script>
+</body>
+</html>

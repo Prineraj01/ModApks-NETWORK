@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>ModApk748 Mods</title>
+  <meta name="description" content="ModApk748 Mods - Mods, Books & Internet Configs" />
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="navbar">
+    <div class="brand">ModApk748 Mods</div>
+    <nav class="nav-links">
+      <a href="mods.html">Mods</a>
+      <a href="books.html">Books</a>
+      <a href="configs.html">Internet Config</a>
+      <a href="admin.html" class="admin-link">Admin</a>
+      <button id="themeToggle" class="btn small">Toggle Theme</button>
+    </nav>
+  </header>
+
+  <main class="container">
+    <section class="hero">
+      <h1>ModApk748 Mods</h1>
+      <p class="lead">Neon-styled downloads, books and internet configs — easy to manage via a built-in admin panel.</p>
+      <div class="search-wrap">
+        <input id="globalSearch" placeholder="Search APKs, books, configs..." />
+      </div>
+      <div id="cards" class="grid"></div>
+    </section>
+
+    <section class="features">
+      <div class="card feature">
+        <h3>Mods</h3>
+        <p>Browse APK cards, thumbnails and download links.</p>
+        <a class="btn" href="mods.html">Open Mods</a>
+      </div>
+      <div class="card feature">
+        <h3>Books</h3>
+        <p>10th, 11th JEE/NEET, 12th JEE/NEET categories with book links.</p>
+        <a class="btn" href="books.html">Open Books</a>
+      </div>
+      <div class="card feature">
+        <h3>Internet Config</h3>
+        <p>Upload and share internet config links.</p>
+        <a class="btn" href="configs.html">Open Configs</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div>© ModApk748 Mods · space for ads · <a href="https://t.me/ModApk748" target="_blank">Telegram</a></div>
+  </footer>
+
+  <script src="app.js"></script>
+  <script>
+    // Hook up index search to display some highlights
+    document.getElementById('globalSearch').addEventListener('input', e => {
+      const q = e.target.value.toLowerCase();
+      window.showHomeCards(q);
+    });
+    window.addEventListener('DOMContentLoaded', () => window.showHomeCards(''));
+  </script>
+</body>
+</html>

@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Admin - ModApk748 Mods</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="navbar">
+    <div class="brand">ModApk748 Mods - Admin</div>
+    <nav class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="mods.html">Mods</a>
+      <a href="books.html">Books</a>
+      <a href="configs.html">Internet Config</a>
+    </nav>
+  </header>
+
+  <main class="container admin">
+    <h2>Admin Panel</h2>
+    <div id="loginBox" class="panel">
+      <p>Enter admin password to manage the site.</p>
+      <input id="adminPass" placeholder="password" />
+      <button id="loginBtn" class="btn">Login</button>
+      <p class="hint">Admin password is <strong>@gmail.com/Prince7488</strong> (client-side demo). For public apps use a backend.</p>
+    </div>
+
+    <div id="adminArea" style="display:none;">
+      <div class="panel">
+        <h3>Manage Mods</h3>
+        <input id="modTitle" placeholder="APK title" />
+        <input id="modLink" placeholder="File URL or paste link" />
+        <input type="file" id="modImage" accept="image/*" />
+        <button id="addMod" class="btn">Add Mod</button>
+        <div id="modsList"></div>
+      </div>
+
+      <div class="panel">
+        <h3>Manage Books</h3>
+        <select id="bookCat">
+          <option value="10th">10th</option>
+          <option value="11th-jee">11th JEE</option>
+          <option value="11th-neet">11th NEET</option>
+          <option value="12th-jee">12th JEE</option>
+          <option value="12th-neet">12th NEET</option>
+        </select>
+        <input id="bookTitle" placeholder="Book title" />
+        <input id="bookLink" placeholder="File URL or link" />
+        <input type="file" id="bookImage" accept="image/*" />
+        <button id="addBook" class="btn">Add Book</button>
+        <div id="booksList"></div>
+      </div>
+
+      <div class="panel">
+        <h3>Manage Configs</h3>
+        <input id="cfgTitle" placeholder="Config title" />
+        <input id="cfgLink" placeholder="Config link" />
+        <button id="addCfg" class="btn">Add Config</button>
+        <div id="cfgList"></div>
+      </div>
+
+      <div class="panel">
+        <h3>Export / Import Data</h3>
+        <button id="exportData" class="btn">Export JSON</button>
+        <input type="file" id="importFile" />
+        <button id="importBtn" class="btn">Import JSON</button>
+        <p>Note: This admin system is client-side for Netlify demo. To sync across all users use a backend (Firebase, Netlify Functions, etc.).</p>
+      </div>
+    </div>
+
+  </main>
+
+  <footer class="footer">© ModApk748 Mods</footer>
+  <script src="app.js"></script>
+  <script>
+    // Admin login handling implemented in app.js
+  </script>
+</body>
+</html>

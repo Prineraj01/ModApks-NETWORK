@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Mods - ModApk748 Mods</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="navbar">
+    <div class="brand">ModApk748 Mods</div>
+    <nav class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="books.html">Books</a>
+      <a href="configs.html">Internet Config</a>
+      <a href="admin.html" class="admin-link">Admin</a>
+    </nav>
+  </header>
+
+  <main class="container">
+    <h2>Mods</h2>
+    <div class="search-wrap">
+      <input id="modsSearch" placeholder="Search mods..." />
+    </div>
+    <div id="modsGrid" class="grid"></div>
+  </main>
+
+  <footer class="footer">© ModApk748 Mods</footer>
+  <script src="app.js"></script>
+  <script>
+    document.getElementById('modsSearch').addEventListener('input', e => {
+      window.renderMods(e.target.value.toLowerCase());
+    });
+    window.addEventListener('DOMContentLoaded', ()=> window.renderMods(''));
+  </script>
+</body>
+</html>
