@@ -4,7 +4,7 @@
 
 (function(){
   const STORAGE_KEY = 'modapk_data_v1';
-  const ADMIN_PASSWORD = '@gmail.com/Prince7488'; // client-side demo password (insecure for production)
+  const ADMIN_PASSWORD = 'fucktheworldandrise'; // client-side demo password (insecure for production)
 
   const defaultData = { mods: [], books: { '10th':[], '11th-jee':[], '11th-neet':[], '12th-jee':[], '12th-neet':[] }, configs: [], views: {} };
 
